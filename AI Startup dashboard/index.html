@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Startups Dashboard | NPCC Innovation</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="topbar-brand">
+            AI Startups Dashboard
+            <span class="topbar-subtitle">NPCC AI Startups Entrepreneurship (Course 218)</span>
+        </div>
+        <div style="font-size: 0.85rem;">Administration / Reports</div>
+    </div>
+
+    <div class="container">
+        <div class="summary-container">
+            <div class="metric-card">
+                <div class="metric-title">Total Course Alumni</div>
+                <div class="metric-value">24</div>
+            </div>
+            <div class="metric-card metric-growth">
+                <div class="metric-title">High Growth Status</div>
+                <div class="metric-value">12</div>
+            </div>
+            <div class="metric-card metric-stable">
+                <div class="metric-title">Stable Operations</div>
+                <div class="metric-value">8</div>
+            </div>
+            <div class="metric-card metric-attention">
+                <div class="metric-title">Mentorship Required</div>
+                <div class="metric-value">4</div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            
+            <div class="card col-span-4">
+                <div class="card-header">Post-Program Health Index</div>
+                <div class="chart-container">
+                    <canvas id="healthChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card col-span-8">
+                <div class="card-header">Aggregate Alumni Roadblocks</div>
+                <div class="chart-container">
+                    <canvas id="challengesChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card col-span-12">
+                <div class="card-header">Alumni Venture Reports</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Alumni Entity</th>
+                            <th>Status Index</th>
+                            <th>Venture Risk</th>
+                            <th>Current Blocker</th>
+                            <th>Latest Update (Automated Summary)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="startupTableBody">
+                        </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
