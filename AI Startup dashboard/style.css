@@ -193,3 +193,27 @@ td {
     height: 300px;
     width: 100%;
 }
+
+/* Button Styling for Google Form Link */
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--theme-green);
+    color: #064e3b; 
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #22c55e; 
+    transform: translateY(-1px); 
+}
