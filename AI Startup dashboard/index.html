@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Startups Dashboard | NPCC Innovation</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,6 +19,7 @@
         </div>
         <div style="display: flex; align-items: center; gap: 20px;">
             <div style="font-size: 0.85rem; color: #e2e8f0;">Administration / Reports</div>
+            
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScGrxeCevrtdwmip6V9ACtqeW2FiqGRMO9ilnwu9QyOsb98_A/viewform?usp=publish-editor" target="_blank" class="btn btn-primary">
                 📝 Submit Check-In
             </a>
@@ -26,19 +30,19 @@
         <div class="summary-container">
             <div class="metric-card">
                 <div class="metric-title">Total Course Alumni</div>
-                <div class="metric-value">24</div>
+                <div class="metric-value" id="total-alumni">...</div>
             </div>
             <div class="metric-card metric-growth">
                 <div class="metric-title">High Growth Status</div>
-                <div class="metric-value">12</div>
+                <div class="metric-value" id="growth-count">...</div>
             </div>
             <div class="metric-card metric-stable">
                 <div class="metric-title">Stable Operations</div>
-                <div class="metric-value">8</div>
+                <div class="metric-value" id="stable-count">...</div>
             </div>
             <div class="metric-card metric-attention">
                 <div class="metric-title">Mentorship Required</div>
-                <div class="metric-value">4</div>
+                <div class="metric-value" id="attention-count">...</div>
             </div>
         </div>
 
@@ -67,11 +71,12 @@
                             <th>Status Index</th>
                             <th>Venture Risk</th>
                             <th>Current Blocker</th>
-                            <th>Latest Update (Automated Summary)</th>
+                            <th>Latest Update</th>
                         </tr>
                     </thead>
                     <tbody id="startupTableBody">
-                        </tbody>
+                        <tr><td colspan="5" style="text-align: center; color: #64748b;">Loading live data...</td></tr>
+                    </tbody>
                 </table>
             </div>
 
